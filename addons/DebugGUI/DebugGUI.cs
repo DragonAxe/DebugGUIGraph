@@ -303,11 +303,15 @@ public partial class DebugGUI : Control
 
         if (Settings.enableGraphs)
         {
-            AddChild(graphWindow = new());
+            CanvasLayer canvasLayer = new();
+            canvasLayer.AddChild(graphWindow = new());
+            AddChild(canvasLayer);
         }
         if (Settings.enableGraphs)
         {
-            AddChild(logWindow = new());
+            CanvasLayer canvasLayer = new();
+            canvasLayer.AddChild(logWindow = new());
+            AddChild(canvasLayer);
         }
     }
 }
